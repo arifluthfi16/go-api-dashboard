@@ -73,7 +73,7 @@ export default function Login() {
 
             <div class="flex flex-col">
               <label class="mb-2 text-base sm:text-sm font-bold text-gray-700 tracking-wide">Password</label>
-              <Input placeholder="Password"/>
+              <Input type="password" placeholder="Password"/>
             </div>
 
             <div className={`flex flex-row-reverse items-center`}>
