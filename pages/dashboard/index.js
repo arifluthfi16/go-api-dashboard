@@ -8,6 +8,51 @@ export default function index() {
     setSidebar(!sidebar)
   }
 
+  const shortedUrl = [
+    {
+      original_url: 'https://google.com',
+      shorted_url: 'https://arfl.com/shorted_url',
+      created_at: '16 Aug 2022',
+      number_of_calls: 1000,
+    },
+    {
+      original_url: 'https://google.com',
+      shorted_url: 'https://arfl.com/shorted_url',
+      created_at: '16 Aug 2022',
+      number_of_calls: 1000,
+    },
+    {
+      original_url: 'https://google.com',
+      shorted_url: 'https://arfl.com/shorted_url',
+      created_at: '16 Aug 2022',
+      number_of_calls: 1000,
+    },
+    {
+      original_url: 'https://google.com',
+      shorted_url: 'https://arfl.com/shorted_url',
+      created_at: '16 Aug 2022',
+      number_of_calls: 1000,
+    },
+    {
+      original_url: 'https://google.com',
+      shorted_url: 'https://arfl.com/shorted_url',
+      created_at: '16 Aug 2022',
+      number_of_calls: 1000,
+    },
+    {
+      original_url: 'https://google.com',
+      shorted_url: 'https://arfl.com/shorted_url',
+      created_at: '16 Aug 2022',
+      number_of_calls: 1000,
+    },
+    {
+      original_url: 'https://google.com',
+      shorted_url: 'https://arfl.com/shorted_url',
+      created_at: '16 Aug 2022',
+      number_of_calls: 1000,
+    }  
+  ];
+
   return (
     <div className={`flex h-screen overflow-y-hidden antialiased text-gray-900 bg-white`}>
       {/* SIDE BARS */}
@@ -220,7 +265,7 @@ export default function index() {
 
           {/* Start Content */}
 
-        <div className='grid mt-6 grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4'>
+        <div className='grid mt-6 grid-cols-1 gap-4 md:grid-cols-2'>
           <Link
             href='#'
           >
@@ -229,16 +274,16 @@ export default function index() {
             >
               <div class="flex items-start">
                 <div class="flex flex-col flex-shrink-0 space-y-2">
-                  <span class="text-gray-400">Total Users</span>
-                  <span class="text-lg font-semibold">100,221</span>
+                  <span class="text-gray-400">Created Short Url</span>
+                  <span class="text-lg font-semibold">103</span>
                 </div>
                 {/* <div class="relative min-w-0 ml-auto h-14">
                   <canvas id="usersChart"></canvas>
                 </div> */}
               </div>
               <div>
-                <span class="inline-block px-2 text-sm text-white bg-green-300 rounded">14%</span>
-                <span>from 2020</span>
+                <span class="inline-block px-2 text-sm text-white bg-green-300 rounded mr-2">+3</span>
+                <span>This Week</span>
               </div>
             </a>
           </Link>
@@ -250,63 +295,104 @@ export default function index() {
             >
               <div class="flex items-start">
                 <div class="flex flex-col flex-shrink-0 space-y-2">
-                  <span class="text-gray-400">Total Users</span>
-                  <span class="text-lg font-semibold">100,221</span>
+                  <span class="text-gray-400">Total Visit</span>
+                  <span class="text-lg font-semibold">1242</span>
                 </div>
                 {/* <div class="relative min-w-0 ml-auto h-14">
                   <canvas id="usersChart"></canvas>
                 </div> */}
               </div>
               <div>
-                <span class="inline-block px-2 text-sm text-white bg-green-300 rounded">14%</span>
-                <span>from 2020</span>
+                <span class="inline-block px-2 text-sm text-white bg-green-300 rounded mr-2">+20</span>
+                <span>Today</span>
               </div>
             </a>
           </Link>
-          <Link
-            href='#'
-          >
-            <a
-              className='p-4 transition-shadow border rounded-lg shadow-sm hover:shadow-lg'
-            >
-              <div class="flex items-start">
-                <div class="flex flex-col flex-shrink-0 space-y-2">
-                  <span class="text-gray-400">Total Users</span>
-                  <span class="text-lg font-semibold">100,221</span>
-                </div>
-                {/* <div class="relative min-w-0 ml-auto h-14">
-                  <canvas id="usersChart"></canvas>
-                </div> */}
-              </div>
-              <div>
-                <span class="inline-block px-2 text-sm text-white bg-green-300 rounded">14%</span>
-                <span>from 2020</span>
-              </div>
-            </a>
-          </Link>
-          <Link
-            href='#'
-          >
-            <a
-              className='p-4 transition-shadow border rounded-lg shadow-sm hover:shadow-lg'
-            >
-              <div class="flex items-start">
-                <div class="flex flex-col flex-shrink-0 space-y-2">
-                  <span class="text-gray-400">Total Users</span>
-                  <span class="text-lg font-semibold">100,221</span>
-                </div>
-                {/* <div class="relative min-w-0 ml-auto h-14">
-                  <canvas id="usersChart"></canvas>
-                </div> */}
-              </div>
-              <div>
-                <span class="inline-block px-2 text-sm text-white bg-green-300 rounded">14%</span>
-                <span>from 2020</span>
-              </div>
-            </a>
-          </Link>
+        
         </div>
-        </main> 
+
+        {/* SHORT URLS TABLE */}
+        <h3 class="mt-6 text-xl">Shorted Urls</h3>
+        <div className="flex flex-col mt-6">
+          <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+              <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th
+                        scope="col"
+                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      >
+                        Url
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      >
+                        Created At
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      >
+                        Status
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      >
+                        Total Visit
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      >
+                        Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-200">
+                    {shortedUrl.map((item,index ) => (
+                      <tr key={`${item.created_at}_${index}}`}>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="flex items-center">
+                            <div className="ml-4">
+                              <div className="text-sm font-medium text-gray-900">{item.shorted_url}</div>
+                              <div className="text-sm text-gray-500">{item.original_url}</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="text-sm text-gray-900">{item.created_at}</div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                            Active
+                          </span>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{item.number_of_calls}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                          <a href="#" className="text-indigo-600 hover:text-indigo-900">
+                            Edits
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        </main>
+
+         {/* FOOTERS */}
+         <footer className='flex items-center justify-between flex-shrink-0 p-4 border-t max-h-14'>
+           FOOTERS
+         </footer>
+                    
+        
       </div>
 
     </div>
